@@ -36,3 +36,61 @@ This project focuses on that core layer:
 - **IDE**: Visual Studio Code
 
 ### Project Structure
+```
+Fraud-Detection-Pipeline/
+├── src/                    # All pipeline logic as Python package
+│   ├── extract/            # Data ingestion (CSV → DataFrame)
+│   ├── transform/          # Cleaning + fraud business rules
+│   ├── load/               # Write Parquet / future S3/DB
+│   ├── quality/            # Data quality & validation checks
+│   ├── utils/              # Logging, config loader, helpers
+│   ├── main.py             # Pipeline entry point
+│   └── init.py
+├── config/                 # YAML configs (paths, thresholds, rules)
+│   └── config.yaml
+├── data/                   # Datasets (raw/processed/external) — gitignored for large files
+├── dags/                   # Future Airflow/Dagster DAG definitions
+├── docs/                   # Architecture diagrams, decisions
+├── notebooks/              # Quick EDA only — not production
+├── tests/                  # Unit tests (pytest coming soon)
+├── .venv/                  # Virtual environment (gitignored)
+├── requirements.txt        # Reproducible dependencies
+└── README.md
+```
+
+
+### Quick Start 
+1. Clone the repo:
+  ```bash
+   git clone https://github.com/YOUR_USERNAME/Fraud-Detection-Pipeline.git
+   cd Fraud-Detection-Pipeline
+  ```
+
+2. Create & activate virtual environment (Windows example):
+  ```powershell
+  python -m venv .venv
+  .\.venv\Scripts\Activate.ps1
+  ```
+3. Install dependencies:
+  ```powershell
+  python -m pip install --upgrade pip
+  pip install -r requirements.txt
+  ```
+4. (Coming soon) Run the skeleton pipeline:
+  ```powershell
+  python src/main.py
+  ```
+
+Roadmap:
+- Stage 2: Config-driven skeleton pipeline with dummy extract/transform/load
+- Stage 3: Ingest real/mock transaction CSV + basic cleaning
+- Stage 4: Implement core fraud rules (velocity, balance checks, etc.)
+- Stage 5: Data quality layer (schema validation, completeness, Great Expectations)
+- Stage 6: Parquet partitioning & local "lakehouse" simulation
+- Stage 7: Orchestration (Airflow local / Dagster) + retries
+- Stage 8: Dockerization + basic monitoring/alerting stubs
+- Stage 9: Deployment simulation (S3 + Athena queries)
+- Stage 10: Documentation, tests, LinkedIn write-up
+
+### Licensing: 
+MIT License - you are free to fork/use as inspiration.
