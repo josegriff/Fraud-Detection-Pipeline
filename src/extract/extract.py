@@ -39,6 +39,8 @@ def extract_transactions(input_path: str) -> pd.DataFrame:
     
     df = df[required_columns + extra]
     
+    df["trans_date_trans_time"] = pd.to_datetime(df["trans_date_trans_time"])
+    
     logger.info(f"[EXTRACT] Successfully extracted {len(df)} rows")
     return df
     

@@ -1,0 +1,21 @@
+IDEAS:
+
+Testing by using head change. 
+In testing changed extract function to head, 
+run lightweight sample dataset for testing first 500 rows
+
+Change config point to a sample output folder
+
+'processed transaction: data/processed/sample_output' 
+
+then run the pipeline 
+
+check the sample output 
+
+aim to see year=...
+              month=...
+            day=...
+                transaction.p...
+            day=...
+                transaction.p...
+        

@@ -1,0 +1,616 @@
+2026-02-12 10:53:40.086 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 10:53:40.100 | INFO     | __main__:run_pipeline:22 - [ORCHESTRATION] Loaded configuration from {config_path}
+2026-02-12 10:57:24.328 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 10:57:24.335 | INFO     | __main__:run_pipeline:22 - [ORCHESTRATION] Loaded configuration from {config_path}
+2026-02-12 10:59:55.336 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 10:59:55.336 | INFO     | __main__:run_pipeline:22 - [ORCHESTRATION] Loaded configuration from {config_path}
+2026-02-12 11:00:16.751 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:00:16.751 | ERROR    | __main__:run_pipeline:24 - [ORCHESTRATION] Failed to load configuration: expected str, bytes or os.PathLike object, not NoneType
+2026-02-12 11:00:50.126 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:00:50.126 | ERROR    | __main__:run_pipeline:24 - [ORCHESTRATION] Failed to load configuration: expected str, bytes or os.PathLike object, not NoneType
+2026-02-12 11:07:49.094 | INFO     | __main__:run_pipeline:19 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:07:49.094 | ERROR    | __main__:run_pipeline:25 - [ORCHESTRATION] Failed to load configuration: expected str, bytes or os.PathLike object, not NoneType
+2026-02-12 11:11:10.782 | INFO     | __main__:run_pipeline:19 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:11:10.782 | INFO     | __main__:run_pipeline:23 - [ORCHESTRATION] Loaded configuration from {config_path}
+2026-02-12 11:14:47.256 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:14:47.256 | INFO     | __main__:run_pipeline:22 - [ORCHESTRATION] Loaded configuration from {config_path}
+2026-02-12 11:16:50.630 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:16:50.630 | INFO     | __main__:run_pipeline:23 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:17:37.989 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:17:37.989 | INFO     | __main__:run_pipeline:23 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:19:34.522 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:19:34.522 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:26:43.703 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:26:43.706 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:27:42.640 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:27:42.640 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:30:54.422 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:30:54.422 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:31:56.049 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:31:56.051 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:37:05.296 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:37:05.296 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:37:24.930 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:37:24.931 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:37:39.685 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:37:39.702 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:37:39.702 | INFO     | extract.extract:extract_transactions:14 - [EXTRACT] Reading CSV from data/raw/fraudTrain.csv
+2026-02-12 11:37:43.225 | INFO     | extract.extract:extract_transactions:29 - [EXTRACT] Columns after normalisation: ['unnamed:_0', 'trans_date_trans_time', 'cc_num', 'merchant', 'category', 'amt', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city_pop', 'job', 'dob', 'trans_num', 'unix_time', 'merch_lat', 'merch_long', 'is_fraud']
+2026-02-12 11:37:43.225 | WARNING  | extract.extract:extract_transactions:38 - [EXTRACT] Extra columns detected: ['unnamed:_0', 'cc_num', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city_pop', 'job', 'dob', 'unix_time', 'merch_lat', 'merch_long']
+2026-02-12 11:37:43.573 | INFO     | extract.extract:extract_transactions:44 - [EXTRACT] Successfully extracted 1296675 rows
+2026-02-12 11:37:43.573 | INFO     | transform.transform:transform_transaction:5 - [TRANSFORM] Starting transformation process
+2026-02-12 11:37:43.573 | INFO     | transform.transform:transform_transaction:9 - [TRANSFORM] Converted amount column to float
+2026-02-12 11:37:43.628 | INFO     | transform.transform:transform_transaction:20 - [TRANSFORM] Added time-based features
+2026-02-12 11:37:43.629 | INFO     | transform.transform:transform_transaction:24 - [TRANSFORM] Applied basic fraud rules
+2026-02-12 11:37:43.629 | INFO     | transform.transform:transform_transaction:26 - [TRANSFORM] Transformation complete. Output rows: 1296675
+2026-02-12 11:37:43.629 | INFO     | load.load:load_transaction:7 - Starting partitioned load step...
+2026-02-12 11:37:43.717 | ERROR    | __main__:run_pipeline:52 - [ORCHESTRATION] Load step failed: [WinError 3] The system cannot find the path specified: 'data\\processed\\fraudTrain_sample.csv\\year=2019'
+2026-02-12 11:46:25.994 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:46:26.015 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:46:26.015 | INFO     | extract.extract:extract_transactions:14 - [EXTRACT] Reading CSV from data/raw/fraudTrain.csv
+2026-02-12 11:46:29.489 | INFO     | extract.extract:extract_transactions:29 - [EXTRACT] Columns after normalisation: ['unnamed:_0', 'trans_date_trans_time', 'cc_num', 'merchant', 'category', 'amt', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city_pop', 'job', 'dob', 'trans_num', 'unix_time', 'merch_lat', 'merch_long', 'is_fraud']
+2026-02-12 11:46:29.489 | WARNING  | extract.extract:extract_transactions:38 - [EXTRACT] Extra columns detected: ['unnamed:_0', 'cc_num', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city_pop', 'job', 'dob', 'unix_time', 'merch_lat', 'merch_long']
+2026-02-12 11:46:29.816 | INFO     | extract.extract:extract_transactions:44 - [EXTRACT] Successfully extracted 1296675 rows
+2026-02-12 11:46:29.817 | INFO     | transform.transform:transform_transaction:5 - [TRANSFORM] Starting transformation process
+2026-02-12 11:46:29.818 | INFO     | transform.transform:transform_transaction:9 - [TRANSFORM] Converted amount column to float
+2026-02-12 11:46:29.867 | INFO     | transform.transform:transform_transaction:20 - [TRANSFORM] Added time-based features
+2026-02-12 11:46:29.867 | INFO     | transform.transform:transform_transaction:24 - [TRANSFORM] Applied basic fraud rules
+2026-02-12 11:46:29.867 | INFO     | transform.transform:transform_transaction:26 - [TRANSFORM] Transformation complete. Output rows: 1296675
+2026-02-12 11:46:29.867 | INFO     | load.load:load_transaction:7 - Starting partitioned load step...
+2026-02-12 11:46:29.949 | ERROR    | __main__:run_pipeline:52 - [ORCHESTRATION] Load step failed: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.
+ - `Import fastparquet` failed. fastparquet is required for parquet support. Use pip or conda to install the fastparquet package.
+2026-02-12 11:48:34.858 | INFO     | __main__:run_pipeline:18 - Starting Fraud Detection ETL Pipeline
+2026-02-12 11:48:34.859 | INFO     | __main__:run_pipeline:25 - [ORCHESTRATION] Loaded configuration from config/config.yaml
+2026-02-12 11:48:34.859 | INFO     | extract.extract:extract_transactions:14 - [EXTRACT] Reading CSV from data/raw/fraudTrain.csv
+2026-02-12 11:48:38.425 | INFO     | extract.extract:extract_transactions:29 - [EXTRACT] Columns after normalisation: ['unnamed:_0', 'trans_date_trans_time', 'cc_num', 'merchant', 'category', 'amt', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city_pop', 'job', 'dob', 'trans_num', 'unix_time', 'merch_lat', 'merch_long', 'is_fraud']
+2026-02-12 11:48:38.425 | WARNING  | extract.extract:extract_transactions:38 - [EXTRACT] Extra columns detected: ['unnamed:_0', 'cc_num', 'first', 'last', 'gender', 'street', 'city', 'state', 'zip', 'lat', 'long', 'city_pop', 'job', 'dob', 'unix_time', 'merch_lat', 'merch_long']
+2026-02-12 11:48:38.754 | INFO     | extract.extract:extract_transactions:44 - [EXTRACT] Successfully extracted 1296675 rows
+2026-02-12 11:48:38.754 | INFO     | transform.transform:transform_transaction:5 - [TRANSFORM] Starting transformation process
+2026-02-12 11:48:38.754 | INFO     | transform.transform:transform_transaction:9 - [TRANSFORM] Converted amount column to float
+2026-02-12 11:48:38.808 | INFO     | transform.transform:transform_transaction:20 - [TRANSFORM] Added time-based features
+2026-02-12 11:48:38.812 | INFO     | transform.transform:transform_transaction:24 - [TRANSFORM] Applied basic fraud rules
+2026-02-12 11:48:38.812 | INFO     | transform.transform:transform_transaction:26 - [TRANSFORM] Transformation complete. Output rows: 1296675
+2026-02-12 11:48:38.812 | INFO     | load.load:load_transaction:7 - Starting partitioned load step...
+2026-02-12 11:48:39.870 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=01\transactions.parquet
+2026-02-12 11:48:39.887 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=02\transactions.parquet
+2026-02-12 11:48:39.900 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=03\transactions.parquet
+2026-02-12 11:48:39.921 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=04\transactions.parquet
+2026-02-12 11:48:39.938 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=05\transactions.parquet
+2026-02-12 11:48:39.956 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=06\transactions.parquet
+2026-02-12 11:48:39.975 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=07\transactions.parquet
+2026-02-12 11:48:39.994 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=08\transactions.parquet
+2026-02-12 11:48:40.010 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=09\transactions.parquet
+2026-02-12 11:48:40.024 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=10\transactions.parquet
+2026-02-12 11:48:40.044 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=11\transactions.parquet
+2026-02-12 11:48:40.061 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=12\transactions.parquet
+2026-02-12 11:48:40.080 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=13\transactions.parquet
+2026-02-12 11:48:40.100 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=14\transactions.parquet
+2026-02-12 11:48:40.119 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=15\transactions.parquet
+2026-02-12 11:48:40.136 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=16\transactions.parquet
+2026-02-12 11:48:40.153 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=17\transactions.parquet
+2026-02-12 11:48:40.170 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=18\transactions.parquet
+2026-02-12 11:48:40.184 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=19\transactions.parquet
+2026-02-12 11:48:40.205 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=20\transactions.parquet
+2026-02-12 11:48:40.224 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=21\transactions.parquet
+2026-02-12 11:48:40.243 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=22\transactions.parquet
+2026-02-12 11:48:40.260 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=23\transactions.parquet
+2026-02-12 11:48:40.279 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=24\transactions.parquet
+2026-02-12 11:48:40.295 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=25\transactions.parquet
+2026-02-12 11:48:40.314 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=26\transactions.parquet
+2026-02-12 11:48:40.333 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=27\transactions.parquet
+2026-02-12 11:48:40.350 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=28\transactions.parquet
+2026-02-12 11:48:40.371 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=29\transactions.parquet
+2026-02-12 11:48:40.388 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=30\transactions.parquet
+2026-02-12 11:48:40.404 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=01\day=31\transactions.parquet
+2026-02-12 11:48:40.422 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=01\transactions.parquet
+2026-02-12 11:48:40.439 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=02\transactions.parquet
+2026-02-12 11:48:40.456 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=03\transactions.parquet
+2026-02-12 11:48:40.474 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=04\transactions.parquet
+2026-02-12 11:48:40.489 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=05\transactions.parquet
+2026-02-12 11:48:40.505 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=06\transactions.parquet
+2026-02-12 11:48:40.526 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=07\transactions.parquet
+2026-02-12 11:48:40.544 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=08\transactions.parquet
+2026-02-12 11:48:40.560 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=09\transactions.parquet
+2026-02-12 11:48:40.583 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=10\transactions.parquet
+2026-02-12 11:48:40.601 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=11\transactions.parquet
+2026-02-12 11:48:40.619 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=12\transactions.parquet
+2026-02-12 11:48:40.635 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=13\transactions.parquet
+2026-02-12 11:48:40.649 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=14\transactions.parquet
+2026-02-12 11:48:40.667 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=15\transactions.parquet
+2026-02-12 11:48:40.684 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=16\transactions.parquet
+2026-02-12 11:48:40.698 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=17\transactions.parquet
+2026-02-12 11:48:40.721 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=18\transactions.parquet
+2026-02-12 11:48:40.751 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=19\transactions.parquet
+2026-02-12 11:48:40.771 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=20\transactions.parquet
+2026-02-12 11:48:40.791 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=21\transactions.parquet
+2026-02-12 11:48:40.809 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=22\transactions.parquet
+2026-02-12 11:48:40.822 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=23\transactions.parquet
+2026-02-12 11:48:40.844 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=24\transactions.parquet
+2026-02-12 11:48:40.862 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=25\transactions.parquet
+2026-02-12 11:48:40.878 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=26\transactions.parquet
+2026-02-12 11:48:40.897 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=27\transactions.parquet
+2026-02-12 11:48:40.913 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=02\day=28\transactions.parquet
+2026-02-12 11:48:40.933 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=01\transactions.parquet
+2026-02-12 11:48:40.952 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=02\transactions.parquet
+2026-02-12 11:48:40.972 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=03\transactions.parquet
+2026-02-12 11:48:40.989 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=04\transactions.parquet
+2026-02-12 11:48:41.009 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=05\transactions.parquet
+2026-02-12 11:48:41.027 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=06\transactions.parquet
+2026-02-12 11:48:41.045 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=07\transactions.parquet
+2026-02-12 11:48:41.062 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=08\transactions.parquet
+2026-02-12 11:48:41.081 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=09\transactions.parquet
+2026-02-12 11:48:41.100 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=10\transactions.parquet
+2026-02-12 11:48:41.114 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=11\transactions.parquet
+2026-02-12 11:48:41.135 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=12\transactions.parquet
+2026-02-12 11:48:41.153 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=13\transactions.parquet
+2026-02-12 11:48:41.170 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=14\transactions.parquet
+2026-02-12 11:48:41.189 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=15\transactions.parquet
+2026-02-12 11:48:41.204 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=16\transactions.parquet
+2026-02-12 11:48:41.231 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=17\transactions.parquet
+2026-02-12 11:48:41.246 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=18\transactions.parquet
+2026-02-12 11:48:41.266 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=19\transactions.parquet
+2026-02-12 11:48:41.281 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=20\transactions.parquet
+2026-02-12 11:48:41.302 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=21\transactions.parquet
+2026-02-12 11:48:41.321 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=22\transactions.parquet
+2026-02-12 11:48:41.336 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=23\transactions.parquet
+2026-02-12 11:48:41.356 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=24\transactions.parquet
+2026-02-12 11:48:41.377 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=25\transactions.parquet
+2026-02-12 11:48:41.391 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=26\transactions.parquet
+2026-02-12 11:48:41.412 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=27\transactions.parquet
+2026-02-12 11:48:41.427 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=28\transactions.parquet
+2026-02-12 11:48:41.446 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=29\transactions.parquet
+2026-02-12 11:48:41.462 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=30\transactions.parquet
+2026-02-12 11:48:41.482 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=03\day=31\transactions.parquet
+2026-02-12 11:48:41.503 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=01\transactions.parquet
+2026-02-12 11:48:41.521 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=02\transactions.parquet
+2026-02-12 11:48:41.537 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=03\transactions.parquet
+2026-02-12 11:48:41.556 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=04\transactions.parquet
+2026-02-12 11:48:41.572 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=05\transactions.parquet
+2026-02-12 11:48:41.593 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=06\transactions.parquet
+2026-02-12 11:48:41.612 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=07\transactions.parquet
+2026-02-12 11:48:41.632 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=08\transactions.parquet
+2026-02-12 11:48:41.650 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=09\transactions.parquet
+2026-02-12 11:48:41.668 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=10\transactions.parquet
+2026-02-12 11:48:41.685 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=11\transactions.parquet
+2026-02-12 11:48:41.704 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=12\transactions.parquet
+2026-02-12 11:48:41.724 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=13\transactions.parquet
+2026-02-12 11:48:41.746 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=14\transactions.parquet
+2026-02-12 11:48:41.767 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=15\transactions.parquet
+2026-02-12 11:48:41.784 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=16\transactions.parquet
+2026-02-12 11:48:41.801 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=17\transactions.parquet
+2026-02-12 11:48:41.815 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=18\transactions.parquet
+2026-02-12 11:48:41.837 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=19\transactions.parquet
+2026-02-12 11:48:41.856 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=20\transactions.parquet
+2026-02-12 11:48:41.875 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=21\transactions.parquet
+2026-02-12 11:48:41.891 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=22\transactions.parquet
+2026-02-12 11:48:41.912 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=23\transactions.parquet
+2026-02-12 11:48:41.927 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=24\transactions.parquet
+2026-02-12 11:48:41.946 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=25\transactions.parquet
+2026-02-12 11:48:41.961 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=26\transactions.parquet
+2026-02-12 11:48:41.984 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=27\transactions.parquet
+2026-02-12 11:48:42.002 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=28\transactions.parquet
+2026-02-12 11:48:42.021 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=29\transactions.parquet
+2026-02-12 11:48:42.037 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=04\day=30\transactions.parquet
+2026-02-12 11:48:42.057 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=01\transactions.parquet
+2026-02-12 11:48:42.080 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=02\transactions.parquet
+2026-02-12 11:48:42.113 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=03\transactions.parquet
+2026-02-12 11:48:42.146 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=04\transactions.parquet
+2026-02-12 11:48:42.182 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=05\transactions.parquet
+2026-02-12 11:48:42.217 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=06\transactions.parquet
+2026-02-12 11:48:42.233 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=07\transactions.parquet
+2026-02-12 11:48:42.251 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=08\transactions.parquet
+2026-02-12 11:48:42.269 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=09\transactions.parquet
+2026-02-12 11:48:42.287 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=10\transactions.parquet
+2026-02-12 11:48:42.308 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=11\transactions.parquet
+2026-02-12 11:48:42.325 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=12\transactions.parquet
+2026-02-12 11:48:42.346 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=13\transactions.parquet
+2026-02-12 11:48:42.364 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=14\transactions.parquet
+2026-02-12 11:48:42.383 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=15\transactions.parquet
+2026-02-12 11:48:42.401 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=16\transactions.parquet
+2026-02-12 11:48:42.422 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=17\transactions.parquet
+2026-02-12 11:48:42.439 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=18\transactions.parquet
+2026-02-12 11:48:42.461 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=19\transactions.parquet
+2026-02-12 11:48:42.481 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=20\transactions.parquet
+2026-02-12 11:48:42.495 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=21\transactions.parquet
+2026-02-12 11:48:42.516 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=22\transactions.parquet
+2026-02-12 11:48:42.531 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=23\transactions.parquet
+2026-02-12 11:48:42.551 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=24\transactions.parquet
+2026-02-12 11:48:42.574 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=25\transactions.parquet
+2026-02-12 11:48:42.594 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=26\transactions.parquet
+2026-02-12 11:48:42.615 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=27\transactions.parquet
+2026-02-12 11:48:42.628 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=28\transactions.parquet
+2026-02-12 11:48:42.652 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=29\transactions.parquet
+2026-02-12 11:48:42.672 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=30\transactions.parquet
+2026-02-12 11:48:42.690 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=05\day=31\transactions.parquet
+2026-02-12 11:48:42.711 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=01\transactions.parquet
+2026-02-12 11:48:42.732 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=02\transactions.parquet
+2026-02-12 11:48:42.752 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=03\transactions.parquet
+2026-02-12 11:48:42.770 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=04\transactions.parquet
+2026-02-12 11:48:42.791 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=05\transactions.parquet
+2026-02-12 11:48:42.808 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=06\transactions.parquet
+2026-02-12 11:48:42.827 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=07\transactions.parquet
+2026-02-12 11:48:42.847 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=08\transactions.parquet
+2026-02-12 11:48:42.864 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=09\transactions.parquet
+2026-02-12 11:48:42.888 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=10\transactions.parquet
+2026-02-12 11:48:42.912 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=11\transactions.parquet
+2026-02-12 11:48:42.932 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=12\transactions.parquet
+2026-02-12 11:48:42.953 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=13\transactions.parquet
+2026-02-12 11:48:42.973 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=14\transactions.parquet
+2026-02-12 11:48:42.989 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=15\transactions.parquet
+2026-02-12 11:48:43.009 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=16\transactions.parquet
+2026-02-12 11:48:43.031 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=17\transactions.parquet
+2026-02-12 11:48:43.055 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=18\transactions.parquet
+2026-02-12 11:48:43.073 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=19\transactions.parquet
+2026-02-12 11:48:43.093 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=20\transactions.parquet
+2026-02-12 11:48:43.113 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=21\transactions.parquet
+2026-02-12 11:48:43.136 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=22\transactions.parquet
+2026-02-12 11:48:43.156 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=23\transactions.parquet
+2026-02-12 11:48:43.176 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=24\transactions.parquet
+2026-02-12 11:48:43.197 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=25\transactions.parquet
+2026-02-12 11:48:43.217 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=26\transactions.parquet
+2026-02-12 11:48:43.232 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=27\transactions.parquet
+2026-02-12 11:48:43.256 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=28\transactions.parquet
+2026-02-12 11:48:43.275 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=29\transactions.parquet
+2026-02-12 11:48:43.301 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=06\day=30\transactions.parquet
+2026-02-12 11:48:43.322 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=01\transactions.parquet
+2026-02-12 11:48:43.337 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=02\transactions.parquet
+2026-02-12 11:48:43.361 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=03\transactions.parquet
+2026-02-12 11:48:43.377 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=04\transactions.parquet
+2026-02-12 11:48:43.399 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=05\transactions.parquet
+2026-02-12 11:48:43.419 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=06\transactions.parquet
+2026-02-12 11:48:43.439 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=07\transactions.parquet
+2026-02-12 11:48:43.474 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=08\transactions.parquet
+2026-02-12 11:48:43.488 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=09\transactions.parquet
+2026-02-12 11:48:43.510 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=10\transactions.parquet
+2026-02-12 11:48:43.530 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=11\transactions.parquet
+2026-02-12 11:48:43.550 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=12\transactions.parquet
+2026-02-12 11:48:43.565 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=13\transactions.parquet
+2026-02-12 11:48:43.586 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=14\transactions.parquet
+2026-02-12 11:48:43.609 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=15\transactions.parquet
+2026-02-12 11:48:43.628 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=16\transactions.parquet
+2026-02-12 11:48:43.657 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=17\transactions.parquet
+2026-02-12 11:48:43.680 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=18\transactions.parquet
+2026-02-12 11:48:43.704 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=19\transactions.parquet
+2026-02-12 11:48:43.744 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=20\transactions.parquet
+2026-02-12 11:48:43.774 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=21\transactions.parquet
+2026-02-12 11:48:43.808 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=22\transactions.parquet
+2026-02-12 11:48:43.828 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=23\transactions.parquet
+2026-02-12 11:48:43.854 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=24\transactions.parquet
+2026-02-12 11:48:43.900 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=25\transactions.parquet
+2026-02-12 11:48:43.922 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=26\transactions.parquet
+2026-02-12 11:48:43.950 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=27\transactions.parquet
+2026-02-12 11:48:43.977 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=28\transactions.parquet
+2026-02-12 11:48:44.008 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=29\transactions.parquet
+2026-02-12 11:48:44.032 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=30\transactions.parquet
+2026-02-12 11:48:44.052 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=07\day=31\transactions.parquet
+2026-02-12 11:48:44.079 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=01\transactions.parquet
+2026-02-12 11:48:44.105 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=02\transactions.parquet
+2026-02-12 11:48:44.129 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=03\transactions.parquet
+2026-02-12 11:48:44.156 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=04\transactions.parquet
+2026-02-12 11:48:44.184 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=05\transactions.parquet
+2026-02-12 11:48:44.213 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=06\transactions.parquet
+2026-02-12 11:48:44.244 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=07\transactions.parquet
+2026-02-12 11:48:44.270 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=08\transactions.parquet
+2026-02-12 11:48:44.296 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=09\transactions.parquet
+2026-02-12 11:48:44.328 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=10\transactions.parquet
+2026-02-12 11:48:44.358 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=11\transactions.parquet
+2026-02-12 11:48:44.385 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=12\transactions.parquet
+2026-02-12 11:48:44.411 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=13\transactions.parquet
+2026-02-12 11:48:44.435 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=14\transactions.parquet
+2026-02-12 11:48:44.459 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=15\transactions.parquet
+2026-02-12 11:48:44.482 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=16\transactions.parquet
+2026-02-12 11:48:44.510 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=17\transactions.parquet
+2026-02-12 11:48:44.539 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=18\transactions.parquet
+2026-02-12 11:48:44.565 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=19\transactions.parquet
+2026-02-12 11:48:44.587 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=20\transactions.parquet
+2026-02-12 11:48:44.614 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=21\transactions.parquet
+2026-02-12 11:48:44.652 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=22\transactions.parquet
+2026-02-12 11:48:44.687 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=23\transactions.parquet
+2026-02-12 11:48:44.738 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=24\transactions.parquet
+2026-02-12 11:48:44.768 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=25\transactions.parquet
+2026-02-12 11:48:44.796 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=26\transactions.parquet
+2026-02-12 11:48:44.819 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=27\transactions.parquet
+2026-02-12 11:48:44.840 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=28\transactions.parquet
+2026-02-12 11:48:44.858 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=29\transactions.parquet
+2026-02-12 11:48:44.879 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=30\transactions.parquet
+2026-02-12 11:48:44.905 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=08\day=31\transactions.parquet
+2026-02-12 11:48:44.926 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=01\transactions.parquet
+2026-02-12 11:48:44.947 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=02\transactions.parquet
+2026-02-12 11:48:44.964 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=03\transactions.parquet
+2026-02-12 11:48:44.983 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=04\transactions.parquet
+2026-02-12 11:48:45.003 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=05\transactions.parquet
+2026-02-12 11:48:45.023 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=06\transactions.parquet
+2026-02-12 11:48:45.040 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=07\transactions.parquet
+2026-02-12 11:48:45.059 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=08\transactions.parquet
+2026-02-12 11:48:45.079 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=09\transactions.parquet
+2026-02-12 11:48:45.093 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=10\transactions.parquet
+2026-02-12 11:48:45.113 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=11\transactions.parquet
+2026-02-12 11:48:45.128 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=12\transactions.parquet
+2026-02-12 11:48:45.147 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=13\transactions.parquet
+2026-02-12 11:48:45.162 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=14\transactions.parquet
+2026-02-12 11:48:45.187 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=15\transactions.parquet
+2026-02-12 11:48:45.204 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=16\transactions.parquet
+2026-02-12 11:48:45.223 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=17\transactions.parquet
+2026-02-12 11:48:45.240 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=18\transactions.parquet
+2026-02-12 11:48:45.259 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=19\transactions.parquet
+2026-02-12 11:48:45.275 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=20\transactions.parquet
+2026-02-12 11:48:45.296 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=21\transactions.parquet
+2026-02-12 11:48:45.316 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=22\transactions.parquet
+2026-02-12 11:48:45.336 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=23\transactions.parquet
+2026-02-12 11:48:45.354 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=24\transactions.parquet
+2026-02-12 11:48:45.371 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=25\transactions.parquet
+2026-02-12 11:48:45.386 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=26\transactions.parquet
+2026-02-12 11:48:45.408 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=27\transactions.parquet
+2026-02-12 11:48:45.428 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=28\transactions.parquet
+2026-02-12 11:48:45.449 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=29\transactions.parquet
+2026-02-12 11:48:45.469 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=09\day=30\transactions.parquet
+2026-02-12 11:48:45.489 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=01\transactions.parquet
+2026-02-12 11:48:45.505 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=02\transactions.parquet
+2026-02-12 11:48:45.523 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=03\transactions.parquet
+2026-02-12 11:48:45.542 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=04\transactions.parquet
+2026-02-12 11:48:45.561 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=05\transactions.parquet
+2026-02-12 11:48:45.578 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=06\transactions.parquet
+2026-02-12 11:48:45.600 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=07\transactions.parquet
+2026-02-12 11:48:45.620 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=08\transactions.parquet
+2026-02-12 11:48:45.634 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=09\transactions.parquet
+2026-02-12 11:48:45.653 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=10\transactions.parquet
+2026-02-12 11:48:45.673 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=11\transactions.parquet
+2026-02-12 11:48:45.691 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=12\transactions.parquet
+2026-02-12 11:48:45.711 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=13\transactions.parquet
+2026-02-12 11:48:45.735 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=14\transactions.parquet
+2026-02-12 11:48:45.752 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=15\transactions.parquet
+2026-02-12 11:48:45.771 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=16\transactions.parquet
+2026-02-12 11:48:45.788 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=17\transactions.parquet
+2026-02-12 11:48:45.809 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=18\transactions.parquet
+2026-02-12 11:48:45.829 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=19\transactions.parquet
+2026-02-12 11:48:45.851 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=20\transactions.parquet
+2026-02-12 11:48:45.871 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=21\transactions.parquet
+2026-02-12 11:48:45.887 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=22\transactions.parquet
+2026-02-12 11:48:45.906 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=23\transactions.parquet
+2026-02-12 11:48:45.925 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=24\transactions.parquet
+2026-02-12 11:48:45.948 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=25\transactions.parquet
+2026-02-12 11:48:45.968 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=26\transactions.parquet
+2026-02-12 11:48:45.989 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=27\transactions.parquet
+2026-02-12 11:48:46.009 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=28\transactions.parquet
+2026-02-12 11:48:46.025 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=29\transactions.parquet
+2026-02-12 11:48:46.045 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=30\transactions.parquet
+2026-02-12 11:48:46.065 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=10\day=31\transactions.parquet
+2026-02-12 11:48:46.084 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=01\transactions.parquet
+2026-02-12 11:48:46.104 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=02\transactions.parquet
+2026-02-12 11:48:46.121 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=03\transactions.parquet
+2026-02-12 11:48:46.144 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=04\transactions.parquet
+2026-02-12 11:48:46.163 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=05\transactions.parquet
+2026-02-12 11:48:46.183 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=06\transactions.parquet
+2026-02-12 11:48:46.201 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=07\transactions.parquet
+2026-02-12 11:48:46.221 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=08\transactions.parquet
+2026-02-12 11:48:46.241 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=09\transactions.parquet
+2026-02-12 11:48:46.260 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=10\transactions.parquet
+2026-02-12 11:48:46.281 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=11\transactions.parquet
+2026-02-12 11:48:46.297 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=12\transactions.parquet
+2026-02-12 11:48:46.315 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=13\transactions.parquet
+2026-02-12 11:48:46.329 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=14\transactions.parquet
+2026-02-12 11:48:46.349 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=15\transactions.parquet
+2026-02-12 11:48:46.368 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=16\transactions.parquet
+2026-02-12 11:48:46.389 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=17\transactions.parquet
+2026-02-12 11:48:46.406 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=18\transactions.parquet
+2026-02-12 11:48:46.425 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=19\transactions.parquet
+2026-02-12 11:48:46.443 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=20\transactions.parquet
+2026-02-12 11:48:46.461 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=21\transactions.parquet
+2026-02-12 11:48:46.480 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=22\transactions.parquet
+2026-02-12 11:48:46.502 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=23\transactions.parquet
+2026-02-12 11:48:46.523 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=24\transactions.parquet
+2026-02-12 11:48:46.542 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=25\transactions.parquet
+2026-02-12 11:48:46.560 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=26\transactions.parquet
+2026-02-12 11:48:46.579 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=27\transactions.parquet
+2026-02-12 11:48:46.595 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=28\transactions.parquet
+2026-02-12 11:48:46.616 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=29\transactions.parquet
+2026-02-12 11:48:46.642 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=11\day=30\transactions.parquet
+2026-02-12 11:48:46.664 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=01\transactions.parquet
+2026-02-12 11:48:46.689 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=02\transactions.parquet
+2026-02-12 11:48:46.713 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=03\transactions.parquet
+2026-02-12 11:48:46.733 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=04\transactions.parquet
+2026-02-12 11:48:46.753 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=05\transactions.parquet
+2026-02-12 11:48:46.774 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=06\transactions.parquet
+2026-02-12 11:48:46.802 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=07\transactions.parquet
+2026-02-12 11:48:46.825 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=08\transactions.parquet
+2026-02-12 11:48:46.851 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=09\transactions.parquet
+2026-02-12 11:48:46.870 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=10\transactions.parquet
+2026-02-12 11:48:46.891 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=11\transactions.parquet
+2026-02-12 11:48:46.911 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=12\transactions.parquet
+2026-02-12 11:48:46.932 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=13\transactions.parquet
+2026-02-12 11:48:46.953 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=14\transactions.parquet
+2026-02-12 11:48:46.974 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=15\transactions.parquet
+2026-02-12 11:48:46.994 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=16\transactions.parquet
+2026-02-12 11:48:47.018 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=17\transactions.parquet
+2026-02-12 11:48:47.040 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=18\transactions.parquet
+2026-02-12 11:48:47.061 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=19\transactions.parquet
+2026-02-12 11:48:47.079 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=20\transactions.parquet
+2026-02-12 11:48:47.099 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=21\transactions.parquet
+2026-02-12 11:48:47.127 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=22\transactions.parquet
+2026-02-12 11:48:47.150 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=23\transactions.parquet
+2026-02-12 11:48:47.164 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=24\transactions.parquet
+2026-02-12 11:48:47.185 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=25\transactions.parquet
+2026-02-12 11:48:47.209 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=26\transactions.parquet
+2026-02-12 11:48:47.224 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=27\transactions.parquet
+2026-02-12 11:48:47.252 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=28\transactions.parquet
+2026-02-12 11:48:47.275 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=29\transactions.parquet
+2026-02-12 11:48:47.300 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=30\transactions.parquet
+2026-02-12 11:48:47.317 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2019\month=12\day=31\transactions.parquet
+2026-02-12 11:48:47.335 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=01\transactions.parquet
+2026-02-12 11:48:47.343 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=02\transactions.parquet
+2026-02-12 11:48:47.366 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=03\transactions.parquet
+2026-02-12 11:48:47.385 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=04\transactions.parquet
+2026-02-12 11:48:47.402 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=05\transactions.parquet
+2026-02-12 11:48:47.421 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=06\transactions.parquet
+2026-02-12 11:48:47.434 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=07\transactions.parquet
+2026-02-12 11:48:47.454 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=08\transactions.parquet
+2026-02-12 11:48:47.471 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=09\transactions.parquet
+2026-02-12 11:48:47.491 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=10\transactions.parquet
+2026-02-12 11:48:47.509 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=11\transactions.parquet
+2026-02-12 11:48:47.523 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=12\transactions.parquet
+2026-02-12 11:48:47.547 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=13\transactions.parquet
+2026-02-12 11:48:47.564 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=14\transactions.parquet
+2026-02-12 11:48:47.583 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=15\transactions.parquet
+2026-02-12 11:48:47.600 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=16\transactions.parquet
+2026-02-12 11:48:47.619 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=17\transactions.parquet
+2026-02-12 11:48:47.636 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=18\transactions.parquet
+2026-02-12 11:48:47.654 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=19\transactions.parquet
+2026-02-12 11:48:47.672 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=20\transactions.parquet
+2026-02-12 11:48:47.688 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=21\transactions.parquet
+2026-02-12 11:48:47.705 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=22\transactions.parquet
+2026-02-12 11:48:47.723 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=23\transactions.parquet
+2026-02-12 11:48:47.741 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=24\transactions.parquet
+2026-02-12 11:48:47.760 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=25\transactions.parquet
+2026-02-12 11:48:47.776 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=26\transactions.parquet
+2026-02-12 11:48:47.808 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=27\transactions.parquet
+2026-02-12 11:48:47.831 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=28\transactions.parquet
+2026-02-12 11:48:47.844 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=29\transactions.parquet
+2026-02-12 11:48:47.866 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=30\transactions.parquet
+2026-02-12 11:48:47.884 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=01\day=31\transactions.parquet
+2026-02-12 11:48:47.898 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=01\transactions.parquet
+2026-02-12 11:48:47.920 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=02\transactions.parquet
+2026-02-12 11:48:47.940 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=03\transactions.parquet
+2026-02-12 11:48:47.955 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=04\transactions.parquet
+2026-02-12 11:48:47.975 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=05\transactions.parquet
+2026-02-12 11:48:48.003 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=06\transactions.parquet
+2026-02-12 11:48:48.008 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=07\transactions.parquet
+2026-02-12 11:48:48.036 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=08\transactions.parquet
+2026-02-12 11:48:48.056 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=09\transactions.parquet
+2026-02-12 11:48:48.074 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=10\transactions.parquet
+2026-02-12 11:48:48.081 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=11\transactions.parquet
+2026-02-12 11:48:48.107 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=12\transactions.parquet
+2026-02-12 11:48:48.123 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=13\transactions.parquet
+2026-02-12 11:48:48.141 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=14\transactions.parquet
+2026-02-12 11:48:48.158 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=15\transactions.parquet
+2026-02-12 11:48:48.178 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=16\transactions.parquet
+2026-02-12 11:48:48.198 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=17\transactions.parquet
+2026-02-12 11:48:48.214 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=18\transactions.parquet
+2026-02-12 11:48:48.232 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=19\transactions.parquet
+2026-02-12 11:48:48.252 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=20\transactions.parquet
+2026-02-12 11:48:48.268 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=21\transactions.parquet
+2026-02-12 11:48:48.285 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=22\transactions.parquet
+2026-02-12 11:48:48.304 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=23\transactions.parquet
+2026-02-12 11:48:48.321 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=24\transactions.parquet
+2026-02-12 11:48:48.337 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=25\transactions.parquet
+2026-02-12 11:48:48.356 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=26\transactions.parquet
+2026-02-12 11:48:48.373 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=27\transactions.parquet
+2026-02-12 11:48:48.391 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=02\day=28\transactions.parquet
+2026-02-12 11:48:48.406 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=01\transactions.parquet
+2026-02-12 11:48:48.430 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=02\transactions.parquet
+2026-02-12 11:48:48.451 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=03\transactions.parquet
+2026-02-12 11:48:48.468 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=04\transactions.parquet
+2026-02-12 11:48:48.488 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=05\transactions.parquet
+2026-02-12 11:48:48.508 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=06\transactions.parquet
+2026-02-12 11:48:48.524 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=07\transactions.parquet
+2026-02-12 11:48:48.543 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=08\transactions.parquet
+2026-02-12 11:48:48.563 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=09\transactions.parquet
+2026-02-12 11:48:48.584 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=10\transactions.parquet
+2026-02-12 11:48:48.602 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=11\transactions.parquet
+2026-02-12 11:48:48.612 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=12\transactions.parquet
+2026-02-12 11:48:48.638 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=13\transactions.parquet
+2026-02-12 11:48:48.656 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=14\transactions.parquet
+2026-02-12 11:48:48.677 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=15\transactions.parquet
+2026-02-12 11:48:48.698 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=16\transactions.parquet
+2026-02-12 11:48:48.718 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=17\transactions.parquet
+2026-02-12 11:48:48.737 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=18\transactions.parquet
+2026-02-12 11:48:48.754 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=19\transactions.parquet
+2026-02-12 11:48:48.772 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=20\transactions.parquet
+2026-02-12 11:48:48.794 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=21\transactions.parquet
+2026-02-12 11:48:48.812 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=22\transactions.parquet
+2026-02-12 11:48:48.832 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=23\transactions.parquet
+2026-02-12 11:48:48.852 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=24\transactions.parquet
+2026-02-12 11:48:48.871 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=25\transactions.parquet
+2026-02-12 11:48:48.893 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=26\transactions.parquet
+2026-02-12 11:48:48.910 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=27\transactions.parquet
+2026-02-12 11:48:48.929 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=28\transactions.parquet
+2026-02-12 11:48:48.948 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=29\transactions.parquet
+2026-02-12 11:48:48.971 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=30\transactions.parquet
+2026-02-12 11:48:48.980 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=03\day=31\transactions.parquet
+2026-02-12 11:48:49.000 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=01\transactions.parquet
+2026-02-12 11:48:49.029 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=02\transactions.parquet
+2026-02-12 11:48:49.047 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=03\transactions.parquet
+2026-02-12 11:48:49.065 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=04\transactions.parquet
+2026-02-12 11:48:49.083 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=05\transactions.parquet
+2026-02-12 11:48:49.105 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=06\transactions.parquet
+2026-02-12 11:48:49.125 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=07\transactions.parquet
+2026-02-12 11:48:49.142 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=08\transactions.parquet
+2026-02-12 11:48:49.161 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=09\transactions.parquet
+2026-02-12 11:48:49.178 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=10\transactions.parquet
+2026-02-12 11:48:49.196 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=11\transactions.parquet
+2026-02-12 11:48:49.214 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=12\transactions.parquet
+2026-02-12 11:48:49.233 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=13\transactions.parquet
+2026-02-12 11:48:49.256 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=14\transactions.parquet
+2026-02-12 11:48:49.272 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=15\transactions.parquet
+2026-02-12 11:48:49.291 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=16\transactions.parquet
+2026-02-12 11:48:49.310 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=17\transactions.parquet
+2026-02-12 11:48:49.341 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=18\transactions.parquet
+2026-02-12 11:48:49.361 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=19\transactions.parquet
+2026-02-12 11:48:49.381 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=20\transactions.parquet
+2026-02-12 11:48:49.401 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=21\transactions.parquet
+2026-02-12 11:48:49.419 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=22\transactions.parquet
+2026-02-12 11:48:49.436 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=23\transactions.parquet
+2026-02-12 11:48:49.455 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=24\transactions.parquet
+2026-02-12 11:48:49.474 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=25\transactions.parquet
+2026-02-12 11:48:49.490 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=26\transactions.parquet
+2026-02-12 11:48:49.507 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=27\transactions.parquet
+2026-02-12 11:48:49.532 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=28\transactions.parquet
+2026-02-12 11:48:49.552 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=29\transactions.parquet
+2026-02-12 11:48:49.563 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=04\day=30\transactions.parquet
+2026-02-12 11:48:49.585 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=01\transactions.parquet
+2026-02-12 11:48:49.605 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=02\transactions.parquet
+2026-02-12 11:48:49.625 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=03\transactions.parquet
+2026-02-12 11:48:49.645 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=04\transactions.parquet
+2026-02-12 11:48:49.666 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=05\transactions.parquet
+2026-02-12 11:48:49.684 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=06\transactions.parquet
+2026-02-12 11:48:49.700 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=07\transactions.parquet
+2026-02-12 11:48:49.720 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=08\transactions.parquet
+2026-02-12 11:48:49.739 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=09\transactions.parquet
+2026-02-12 11:48:49.759 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=10\transactions.parquet
+2026-02-12 11:48:49.771 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=11\transactions.parquet
+2026-02-12 11:48:49.799 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=12\transactions.parquet
+2026-02-12 11:48:49.817 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=13\transactions.parquet
+2026-02-12 11:48:49.827 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=14\transactions.parquet
+2026-02-12 11:48:49.850 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=15\transactions.parquet
+2026-02-12 11:48:49.870 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=16\transactions.parquet
+2026-02-12 11:48:49.883 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=17\transactions.parquet
+2026-02-12 11:48:49.908 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=18\transactions.parquet
+2026-02-12 11:48:49.929 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=19\transactions.parquet
+2026-02-12 11:48:49.944 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=20\transactions.parquet
+2026-02-12 11:48:49.964 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=21\transactions.parquet
+2026-02-12 11:48:49.981 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=22\transactions.parquet
+2026-02-12 11:48:49.997 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=23\transactions.parquet
+2026-02-12 11:48:50.019 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=24\transactions.parquet
+2026-02-12 11:48:50.040 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=25\transactions.parquet
+2026-02-12 11:48:50.061 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=26\transactions.parquet
+2026-02-12 11:48:50.079 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=27\transactions.parquet
+2026-02-12 11:48:50.096 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=28\transactions.parquet
+2026-02-12 11:48:50.115 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=29\transactions.parquet
+2026-02-12 11:48:50.130 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=30\transactions.parquet
+2026-02-12 11:48:50.152 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=05\day=31\transactions.parquet
+2026-02-12 11:48:50.171 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=01\transactions.parquet
+2026-02-12 11:48:50.193 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=02\transactions.parquet
+2026-02-12 11:48:50.209 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=03\transactions.parquet
+2026-02-12 11:48:50.228 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=04\transactions.parquet
+2026-02-12 11:48:50.248 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=05\transactions.parquet
+2026-02-12 11:48:50.266 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=06\transactions.parquet
+2026-02-12 11:48:50.285 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=07\transactions.parquet
+2026-02-12 11:48:50.305 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=08\transactions.parquet
+2026-02-12 11:48:50.325 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=09\transactions.parquet
+2026-02-12 11:48:50.342 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=10\transactions.parquet
+2026-02-12 11:48:50.368 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=11\transactions.parquet
+2026-02-12 11:48:50.385 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=12\transactions.parquet
+2026-02-12 11:48:50.402 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=13\transactions.parquet
+2026-02-12 11:48:50.424 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=14\transactions.parquet
+2026-02-12 11:48:50.437 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=15\transactions.parquet
+2026-02-12 11:48:50.468 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=16\transactions.parquet
+2026-02-12 11:48:50.487 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=17\transactions.parquet
+2026-02-12 11:48:50.508 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=18\transactions.parquet
+2026-02-12 11:48:50.528 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=19\transactions.parquet
+2026-02-12 11:48:50.549 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=20\transactions.parquet
+2026-02-12 11:48:50.568 | INFO     | load.load:load_transaction:31 - Wrote partition: data\processed\tranactions\year=2020\month=06\day=21\transactions.parquet
+2026-02-12 11:48:50.570 | SUCCESS  | load.load:load_transaction:33 - Partitioned load step completed successfully!
+2026-02-12 11:48:50.570 | INFO     | __main__:run_pipeline:50 - [ORCHESTRATION] Load step completed successfully
+2026-02-12 11:48:50.571 | SUCCESS  | __main__:run_pipeline:55 - ETL Pipeline completed successfully
