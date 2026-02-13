@@ -14,7 +14,7 @@ def extract_transactions(input_path: str) -> pd.DataFrame:
     logger.info(f"[EXTRACT] Reading CSV from {input_path}")
     
     try: 
-        df = pd.read_csv(input_path)
+        df = pd.read_csv(input_path).head(500)
     except Exception as e:
         logger.error(f"Error reading CSV: {e}")
         raise
