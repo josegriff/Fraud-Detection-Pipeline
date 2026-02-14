@@ -4,6 +4,12 @@ Testing by using head change.
 In testing changed extract function to head, 
 run lightweight sample dataset for testing first 500 rows
 
+Changing    df = pd.read_csv(input_path)
+                to
+            df = pd.read_csv(input_path).head(500)
+
+in extract.py
+
 Change config point to a sample output folder
 
 'processed transaction: data/processed/sample_output' 
@@ -12,10 +18,55 @@ then run the pipeline
 
 check the sample output 
 
-aim to see year=...
+aim to see: year=...
               month=...
-            day=...
-                transaction.p...
-            day=...
-                transaction.p...
+                day=...
+                    transaction.p...
+                day=...
+                    transaction.p...
         
+
+Inspecting a Parquet file 
+
+Once sample output is correct revert extract
+
+
+Cleaning up code: 
+
+removing try/except blocks from my ETL and adding them to my try/except block to the main.py. Its better to wrap the entire transform step rather than a certain part within it
+
+
+
+Transform.py:
+
+
+Saving bytes: 
+
+In the transformer, I used the df["category_freq"] to compute "flag_merchant_anomaly", which worked but when using a larger dataset, this would waste memory and increase file size unnecessarily
+
+ df["category_freq"] = df.groupby(["cc_num", "category"])["amt"].transform("count")
+ df["flag_merchant_anomaly"] = (df["category_freq"] == 1).astype(int)
+
+to 
+
+df["flag_merchant_anomaly"] = (
+    df.groupby(["cc_num", "category"])["amt"]
+    .transform("count")
+    .eq(1)
+    .astype(int)
+)
+
+Column control:
+
+Addressing no column control in transformer. 
+Can only benefit from direct control over what goes downstream. 
+"final_columns" will sit above final "return df"and after my last log call.
+
+To accompany this "final_columns", "existing_final" creates a cleaned-up list existing currently in the dataframe.
+ Prevents:
+ Silent lose of important columns due to typos
+ Downstream KeyError from unexpected new columns
+
+
+Load.py:
+
