@@ -1,9 +1,13 @@
 """
-This script is the coordinator for the ETL process:
-1. Load configuration and set up logging
-2. Extract raw transaction data
-3. Transform and enrich the dataset
-4. Load partitioned Parquet output into the data lake
+This script is the orchestrator for the ETL process.
+It ties together Extraction, Transformation, and Loading in the stated order,
+handles error at each step, and logs progress clearly
+
+Steps:
+1. Loads configuration (paths, settings) from YAML
+2. Extract raw transaction data from CSV
+3. Applies cleaning, feature engineering, and fraud flags
+4. Saves the enriched data as daily-partitioned Parquet files
 """
 
 from utils.logger import logger
@@ -17,7 +21,7 @@ from load.load import load_transaction
 def run_pipeline(config_path: str = "config/config.yaml") -> None:
     logger.info("Starting Fraud Detection ETL Pipeline")
 
-    # Load config
+    # Load configuration
     try:
         config = load_config(config_path)
         print("CONFIG LOADED:", config)
@@ -44,15 +48,26 @@ def run_pipeline(config_path: str = "config/config.yaml") -> None:
         logger.error(f"[ORCHESTRATION] Transform step failed: {e}")
         raise
 
-    # Load
+    # Load to partitioned Parquet files
     try:
+        logger.info(f"[ORCHESTRATION] Loading transformed data to {processed_path}")
         load_transaction(df_transformed, processed_path)
+        
+        # Show data flow health
+        row_count_raw = len(df_raw)
+        row_count_transformed = len(df_transformed)
+        logger.info(
+            f"[ORCHESTRATION] Processed {row_count_raw:,} raw -> "
+            f"{row_count_transformed:,} transformed rows"
+            )
+        
         logger.info("[ORCHESTRATION] Load step completed successfully")
     except Exception as e:
         logger.error(f"[ORCHESTRATION] Load step failed: {e}")
         raise
 
-    logger.success("ETL Pipeline completed successfully")
+    # Pipeline finished
+    logger.info("[ORCHESTRATION] ETL Pipeline completed successfully")
 
 if __name__ == "__main__":
     run_pipeline()

@@ -1,44 +1,21 @@
+"""
+This script handles the [LOAD] phase of the ETL process:
+1. Receives the transformed DataFrame from the previous step
+2. Defines and enforces the exact set of columns to be persisted (matches transform output)
+3. Performs safety checks: ensures columns exist and the partitioning column is present
+4. Adds a daily partition key based on transaction date
+5. Groups data by day and writes each group as a partitioned Parquet file
+   (path structure: year=YYYY/month=MM/day=DD/transactions.parquet)
+6. Uses snappy compression for efficient storage
+7. Logs detailed progress including number of rows per partition and total partitions written
+8. Completes the ETL pipeline by saving cleaned, enriched data to the data lake
+"""
+
 from utils.logger import logger
 from pathlib import Path
 import pandas as pd
-import os
 
 def load_transaction(df: pd.DataFrame, base_path: str) -> None:
-    logger.info("Starting partitioned load step...")
-    
-    df["day_period"] = df["trans_date_trans_time"].dt.to_period("D")
-    
-    for period, group_df in df.groupby("day_period"):
-        year = period.year
-        month = period.month
-        day = period.day
-        
-        partition_path = (
-            Path(base_path)
-            / f"year={year}"
-            / f"month={month:02d}"
-            / f"day={day:02d}"
-        )
-        
-        os.makedirs(partition_path, exist_ok=True)
-        
-        clean_df = group_df.drop(columns=["day_period"])
-        
-        output_file = partition_path / "transactions.parquet"
-        
-        clean_df.to_parquet(output_file, index=False)
-        
-        logger.info(f"Wrote partition: {output_file}")
-    
-    logger.success("Partitioned load step completed successfully!")
-
-def load_transaction(df: pd.DataFrame, base_path: str) -> None:
-    """
-    Loads the transformed transaction DataFrame into daily partitioned Parquet files.
-    
-    Expects a DataFrame that has already been processed by transform_transaction().
-    Only persists the columns defined in persist_columns.
-    """
     logger.info("[LOAD] Starting partitioned load step")
 
     # Define exactly which columns should be saved 
@@ -60,7 +37,7 @@ def load_transaction(df: pd.DataFrame, base_path: str) -> None:
         logger.error("[LOAD] No columns to persist – aborting")
         return
 
-    # Apply filter once (cheaper than doing per partition)
+    # Apply filter once and early
     df = df[persist_columns].copy()
 
     # Quick sanity check
@@ -69,7 +46,7 @@ def load_transaction(df: pd.DataFrame, base_path: str) -> None:
         logger.error("[LOAD] Missing required column 'trans_date_trans_time' – cannot partition")
         return
 
-    # Create partition key (daily)
+    # Create partition key
     df["day_period"] = df["trans_date_trans_time"].dt.to_period("D")
 
     written_count = 0
@@ -97,7 +74,6 @@ def load_transaction(df: pd.DataFrame, base_path: str) -> None:
             output_file,
             index=False,
             compression="snappy",      # good balance of size & speed
-            # row_group_size=100_000,  # optional – uncomment if you have large days
         )
 
         written_count += 1

@@ -1,3 +1,14 @@
+"""
+This script handles the [EXTRACT] phase of the ETL process:
+1. Reads the raw transaction CSV file from the specified input path
+2. Strip whitespace, convert to lowercase, replace spaces with underscores
+3. Validates that all required core columns are present, raises error if any are missing
+4. Logs warning if extra/unexpected columns are found
+5. Selects and reorders columns: required columns first, followed by any extras
+6. Converts the transaction timestamp to proper datetime format
+7. Return a cleaned and validated pandas DataFrame readu for the [TRANSFORM] step
+"""
+
 from utils.logger import logger
 import pandas as pd
 

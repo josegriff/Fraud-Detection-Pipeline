@@ -1,3 +1,16 @@
+"""
+This script handles the [TRANSFORM] phase of the ETL process:
+1. Performs basic type conversions and cleaning on key columns (amount, fraud label)
+2. Converts transaction timestamp to datetime and extracts useful time-based features
+   (hour of day, day of week, weekend indicator)
+3. Creates rule-based fraud indicator flags:
+   - High-value transaction flag (> $2000)
+   - Merchant/category anomaly flag (first purchase in this category for the card)
+   - Unusual/late-night transaction flag (midnight to 5:59 AM)
+4. Controls the final output schema by selecting only desired original + engineered columns
+5. Returns the enriched DataFrame ready for the [LOAD] step of the pipeline
+"""
+
 from utils.logger import logger
 import pandas as pd
 
