@@ -82,15 +82,15 @@ Instead of focusing on machine learning, this project is to display skills in th
 **Stage 8: Data Lake Output and Validation**
 - Verify Parquet output structure
 - Confirm partitioning logic
-- Ensure compatablility with future Athena deployment
+- Ensure compatablility with future AWS S3 and Athena deployment
 
 **Stage 9: Documentation
 - Write detailed README with:
   - Project overview
-  - Tech stack
-  - Architecture explanation
-  - Quick start guide
   - Roadmap
+  - Tech stack
+  - Project Structure
+  - Quick start guide
   - Justification of design decisions
 
 **Stage 10: Future Enhancements**
@@ -205,6 +205,41 @@ This pipeline will:
 - Apply rule-based fraud checks
 - Write partitioned Parquet files to the output directory
 - Log all activity to ```logs/pipeline.log```
+
+### Design Decisions
+This pipeline is designed to intentionally avoids over-engineering while following patterns used for real data platforms. Each decision was made by comparing practical alternatives and choosing the option that delivers the best blance for reliability, clarity and future scalability.
+
+I chose Python and pandas over Spark because this dataset fits comfortably in memory, with pandas providing fast transformations with minimal overhead. Spark adds cluster complexity without performance beenfits at this scale. It slows down iteration for a single-developer project and requires additional infrastructure (executors, schedulers, configs). This pipeline is simple, fast and easy to reason about. However, the way the architecture has been set up, it can scale to Spark at a later date if needed.
+
+I decided to have a modular ETL package instead of a single monolithic script because separating extract/transform/load mirros how production pipelines are structured in Airflow. Additional reasons for this design decision:
+
+- **Harder to test**
+
+Transformations can be unit-tested in isolation with fast, reliable fixtures. Monolithic scripts force     end-to-end tests only, leading to poor coverage and slow feedback loops.
+
+- **Harder to orchestratate**
+
+Orchestration tools like Airflow expect tasks to be independent units. A single script can't be broken into tasks with refactoring, a modular ETL on the other hand directly maps to DAG nodes.
+
+- **Harder to extend**
+
+Adding new rules, data sources or new outputs become messy in a monolithic file. In contrast, a modular ETL lets you extend/replace components without having to rewrite an entire pipeline.
+
+- **Encourages hidden side effects**
+
+Monolithic scripts often rely on shared state or implicit assumptions. A modular ETL forces explicit inputs/outputs, which makes pipelines easier to reason about and safer to modify.
+
+I chose to have YAML configuration driven pipelines over hard-coded paths because I prioritise an agnostic environment over short-term development speed. Hard-coding values ties the logic to one specific setup and creates friction as soon as multiple environments or modest changes appear. I also had conerns over:
+
+- **Breaks when moving between dev/staging/prod**
+
+Paths, buckets, endpoints and credentials differ across environments. Hard-coded values cause immediate failures on promotion; an advantage of YAML configurations is that they allow the same code to run unchanged with environment-specific files. 
+
+= **Forces code changes for simple config tweaks**
+
+Adjusting a path, threshold, retry count or new output requires a full PR/review/deploy cycle even when business logic is untouched. With YAML, we avoid redeploying code with lightweight config-only commits.
+
+
 
 ### Licensing: 
 MIT License - you are free to fork/use as inspiration.
