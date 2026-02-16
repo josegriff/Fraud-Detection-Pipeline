@@ -1,39 +1,63 @@
 # Fraud Detection ETL Pipeline
 
 **Rule-based batch ETL pipeline for detecting suspicious transactions**
-Built as a portfolio project to demonstrate solid data engineering practices: ingestion, validation, business-rule enrichment, data quality checks, and scalable output (Parquet / future lakehouse)
+
+Built as a portfolio project to demonstrate data engineering practices: ingestion, validation, business-rule enrichment
 
 ### Why this project?
-In real FinTech fraud systems, the data pipeline is the foundation. It must be reliable, auditable, and fast even before any ML model is added.
-This project focuses on that core layer:
-- Ingest raw transaction CSVs
-- Apply rule-based fraud checks (velocity checks, amount > balance, type mismatches, etc.)
-- Enforce data quality & validation
-- Output clean, partitioned Parquet files (ready for Athena / S3 lakehouse / future ML)
-- Prepare for orchestration (Airflow-style DAGs coming soon)
 
-**No machine learning in this project**, this is purely a data engineering project: The main aim is to make data trustworthy and timely so a future model can consume it without garbage-in-garbage-out problems.
+Fraud detection starts long before any machine learning model is trained, it begins with clean, reliable data. The ETL pipeline is the foundation that ensures every downstream fraud model, dashboard, or alerting system receives trustworthy input.
 
-### Current Status
-- Repository & folder structure set up
-- Virtual environment & dependencies isolated
-- Core packages installed (pandas, pyyaml. loguru, python-dotenv)
-- Imports & basic environment verified
-- Stage 2 in progress: Config + pipeline skeleton
+The primary focus of this project is to build that foundation and demonstrate how a modern fraud pipeline should behave:
+- Ingest raw transaction data from CSV files
+- Normalise and validate schema to enforce data quality
+- Engineer time-based features (hour, weekday, weekend)
+- Apply rule-based fraud checks:
+  - High-value flags
+  - Odd-hour activity
+  - Merchant anomalies
+- Write partitioned Parquet datasets using a datasets using a data-lake layout (year/month/day)
+- Log every step with a centralised, rotating Loguru logger
+- Runs as modular, config-driven ETL pipeline ready for orchestration (Airflow) and cloud deployment (Athena)
 
-### Tech Stack (So far)
+Instead of focusing on machine learning, this project is to display skills in the core engineering layer that fradu systems can rely on:
+- Clean data
+- Reproducible transformations
+- Auditable Logic
+- Scalable storage
+
+### Tech Stack 
+
+This project uses an intentionally lightweight tech stack, these components were chosen to reflect real data engineering practices while keeping the pipeline easy to run locally.
+
 - **Languages**: Python 3.12+
 - **Core Libraries**:
   - pandas (Data handling)
-  - pyyaml (Configuration)
+  - pyarrow (Parquet engine + Snappy compression)
+  - pyyaml (Configuration loading)
   - loguru (Structured logging)
+  - pathlib (filesystem-safe path handling)
   - python-dotenv (env vars)
-- **Tools / planned**:
-  - Great Expectations (Data quality)
-  - Airflow or Dagster (Orchestration)
-  - Docker (Containerisation)
-  - AWS S3 + Athena (Storage/Qyerying)
-- **IDE**: Visual Studio Code
+  - datetime (Timestamp parsing & time-based feature engineering)
+ 
+- **Architecture & Design**
+  - Config-driven ETL (YAML-based paths and settings)
+  - Modular pipeline (Extract -> Transform -> Load)
+  - Centralised logging with rotation, retention, compression
+  - Partitioned data lake output (year/month/day folders)
+  - Rule-based fraud detection (high-value, odd-hour, merchant anomaly)
+  - Feature engineering layer (hour, day-of-week, weekend)
+  - Error-handled orchestration in ```main.py```
+ 
+- **Data Formats**
+  - CSV
+  - Parquet with Snappy compression
+
+- **Development Environment**
+  - Visual Studio Code
+  - Virtual environment
+
+I have intentionally avoided heavyweight tools such as Spark, Airflow becaause they add complexity without improving the learning outcome, they require cloud infrastructure that stop this project from running locally. The architecture I have used is ready for this next stage. YAML config is Airflow friendly, the Parquet partitions is Spark compatible and the modular ETL is easy to contain.
 
 ### Project Structure
 ```
@@ -66,31 +90,50 @@ Fraud-Detection-Pipeline/
    cd Fraud-Detection-Pipeline
   ```
 
-2. Create & activate virtual environment (Windows example):
+2. Create & activate virtual environment
+  Windows:
   ```powershell
   python -m venv .venv
   .\.venv\Scripts\Activate.ps1
   ```
+
+  macOS / Linux
+  ```Bash
+  python3 -m venv .venv
+  source .venv/bin/activate
+  ```
+
 3. Install dependencies:
   ```powershell
   python -m pip install --upgrade pip
   pip install -r requirements.txt
   ```
-4. (Coming soon) Run the skeleton pipeline:
-  ```powershell
-  python src/main.py
+4. Configure your paths
+   Edit config/config.yaml to point to:
+   - the raw CSV input file
+   - the output directory for processed Parquet partitions
+   
+  ```Yaml
+  paths:
+    raw: "data/raw/transactions.csv"
+    processed: "data/processed/"
   ```
 
-Roadmap:
-- Stage 2: Config-driven skeleton pipeline with dummy extract/transform/load
-- Stage 3: Ingest real/mock transaction CSV + basic cleaning
-- Stage 4: Implement core fraud rules (velocity, balance checks, etc.)
-- Stage 5: Data quality layer (schema validation, completeness, Great Expectations)
-- Stage 6: Parquet partitioning & local "lakehouse" simulation
-- Stage 7: Orchestration (Airflow local / Dagster) + retries
-- Stage 8: Dockerization + basic monitoring/alerting stubs
-- Stage 9: Deployment simulation (S3 + Athena queries)
-- Stage 10: Documentation, tests, LinkedIn write-up
+5. Run the ETL pipeline
+   
+```Bash
+python src/main.py
+```
+
+This pipeline will:
+- Extract the raw CSV
+- Clean and enrich the data
+- Apply rule-based fraud checks
+- Write partitioned Parquet files to the output directory
+- Log all activity to ```logs/pipeline.log```
+
+
+
 
 ### Licensing: 
 MIT License - you are free to fork/use as inspiration.
