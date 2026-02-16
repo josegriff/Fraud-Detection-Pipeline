@@ -18,13 +18,88 @@ The primary focus of this project is to build that foundation and demonstrate ho
   - Merchant anomalies
 - Write partitioned Parquet datasets using a datasets using a data-lake layout (year/month/day)
 - Log every step with a centralised, rotating Loguru logger
-- Runs as modular, config-driven ETL pipeline ready for orchestration (Airflow) and cloud deployment (Athena)
+- Runs as modular, config-driven ETL pipeline ready for orchestration (Airflow) and cloud deployment (AWS S3 and Athena)
 
 Instead of focusing on machine learning, this project is to display skills in the core engineering layer that fradu systems can rely on:
 - Clean data
 - Reproducible transformations
 - Auditable Logic
 - Scalable storage
+
+### Roadmap
+
+**Stage 1: Project Setup and Environment**
+- Create repository and folder structure (```src/```, ```config/```, ```data```, ```utils```, etc.)
+- Set up virtual environment and reproducible ```requirements.txt.```
+- Verify imports, logging, and basic environment behaviour
+
+**Stage 2: Config-driven Architecture**
+- Introduce YAML configuration (```config/config.yaml```)
+- Implement ```config_loader.py``` for safe, reusable config access
+- Ensure all paths and setting are externalised
+
+**Stage 3: Extract Module**
+- Build ```extract_transactions()``` to ingest raw CSV files
+- Normalise column names (strip, lowercase, underscores)
+- Implement required-column validation
+- Add warnings for unexpected columns
+- Convert timestamps to proper datetime format
+- Log extraction details and row counts
+
+**Stage 4: Transform Module**
+- Implement ```transform_transaction()``` for cleaning and enrichment
+- Add type conversions (amount, fraud label)
+- Engineer time-based features (hour, weekday, weekend)
+- Add rule-based fraud indicators:
+  - high-value transaction
+  - merchant anomalies
+  - odd-hour activity
+- Define a controlled output schema
+- Log transformation progress and output size
+
+**Stage 5: Load Module**
+- Build ```load_transaction()``` to weite partitioned Parquet files
+- Enforce a strict set of persisted columns
+- Add safety checks for missing partition keys
+- Implement daily partitioning (year/month/day)
+- Write Parquet files with Snappy compression
+- Log partition paths and row counts
+
+**Stage 6: Centralised Logging System**
+- Implement Loguru-based logger with:
+  - rotating logs (1 MB)
+  - 7 day retention
+  - ZIP compression
+- Ensure consistent logging across all ETL stages
+
+**Stage 7: Pipeline Orchestration**
+- Build ```run_pipeline()``` in ```main.py```
+- Connect extract -> transform -> load into a single flow
+- Add error handling for each stage
+- Log pipeline start, end and data-flow health
+- Prepare structure for future orchestration (Airflow)
+
+**Stage 8: Data Lake Output and Validation**
+- Verify Parquet output structure
+- Confirm partitioning logic
+- Ensure compatablility with future Athena deployment
+
+**Stage 9: Documentation
+- Write detailed README with:
+  - Project overview
+  - Tech stack
+  - Architecture explanation
+  - Quick start guide
+  - Roadmap
+  - Justification of design decisions
+
+**Stage 10: Future Enhancements
+- Add Great Expectations for data quality
+- Add Airflow for orchestration
+- Containerise with Docker
+- Deploy with AWS S3 and Athena
+- Add unit tests with pytest
+- Add monitoring stubs
 
 ### Tech Stack 
 
@@ -62,24 +137,23 @@ I have intentionally avoided heavyweight tools such as Spark, Airflow becaause t
 ### Project Structure
 ```
 Fraud-Detection-Pipeline/
-├── src/                    # All pipeline logic as Python package
+├── src/                    # All ETL pipeline logic
 │   ├── extract/            # Data ingestion (CSV → DataFrame)
-│   ├── transform/          # Cleaning + fraud business rules
-│   ├── load/               # Write Parquet / future S3/DB
-│   ├── quality/            # Data quality & validation checks
+│   ├── transform/          # Cleaning and fraud business rules
+│   ├── load/               # Partitioned Parquet writer 
 │   ├── utils/              # Logging, config loader, helpers
 │   ├── main.py             # Pipeline entry point
 │   └── init.py
 ├── config/                 # YAML configs (paths, thresholds, rules)
 │   └── config.yaml
-├── data/                   # Datasets (raw/processed/external) — gitignored for large files
-├── dags/                   # Future Airflow/Dagster DAG definitions
+├── data/                   # Raw and processed datasets
+├── dags/                   # Placeholder for future Airflow orchestration
 ├── docs/                   # Architecture diagrams, decisions
-├── notebooks/              # Quick EDA only — not production
-├── tests/                  # Unit tests (pytest coming soon)
-├── .venv/                  # Virtual environment (gitignored)
+├── tests/                  # Placeholder for future pytest suite
+│    └── __init__.py
+├── logs/                   # Rotating Loguru logs
 ├── requirements.txt        # Reproducible dependencies
-└── README.md
+└── README.md               #  Project documentation
 ```
 
 
@@ -131,9 +205,6 @@ This pipeline will:
 - Apply rule-based fraud checks
 - Write partitioned Parquet files to the output directory
 - Log all activity to ```logs/pipeline.log```
-
-
-
 
 ### Licensing: 
 MIT License - you are free to fork/use as inspiration.
