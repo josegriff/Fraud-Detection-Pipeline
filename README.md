@@ -93,7 +93,7 @@ Instead of focusing on machine learning, this project is to display skills in th
   - Roadmap
   - Justification of design decisions
 
-**Stage 10: Future Enhancements
+**Stage 10: Future Enhancements**
 - Add Great Expectations for data quality
 - Add Airflow for orchestration
 - Containerise with Docker
