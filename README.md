@@ -235,7 +235,7 @@ I chose to have YAML configuration driven pipelines over hard-coded paths becaus
 
 Paths, buckets, endpoints and credentials differ across environments. Hard-coded values cause immediate failures on promotion; an advantage of YAML configurations is that they allow the same code to run unchanged with environment-specific files. 
 
-= **Forces code changes for simple config tweaks**
+- **Forces code changes for simple config tweaks**
 
 Adjusting a path, threshold, retry count or new output requires a full PR/review/deploy cycle even when business logic is untouched. With YAML, we avoid redeploying code with lightweight config-only commits.
 
